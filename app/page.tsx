@@ -49,7 +49,7 @@ export default function Home() {
               className="absolute left-1/2 top-0 h-[420px] w-auto min-[900px]:h-[540px] max-w-none -translate-x-1/2 mix-blend-multiply [mask-image:linear-gradient(to_bottom,#000_86%,transparent)]"
             />
           </div>
-          <StatusBar caption="Margaret’s MedAlert PLUS · live in Guardian" />
+          <StatusBar caption="MedAlert PLUS · connected to Guardian" />
         </div>
       </main>
 
