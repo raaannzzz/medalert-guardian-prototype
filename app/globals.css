@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* MedAlert design tokens — lifted from the Claude Design canvas. */
+@theme inline {
+  --color-ink: #0e1b33;
+  --color-ink-2: #4a5670;
+  --color-blue: #0b63d6;
+  --color-blue-dark: #0850b0;
+  --color-blue-50: #eef4fd;
+  --color-blue-100: #dce8fa;
+  --color-panel: #e9f0fb;
+  --color-line: #d8e0ec;
+  --color-line-soft: #e6ecf5;
+  --color-page: #f5f8fc;
+  --color-field: #8795ae;
+  --color-green: #0b6b40;
+  --color-green-icon: #0e7a4a;
+  --color-green-50: #e4f4eb;
+  --color-green-dot: #1da361;
+  --color-red: #b3261e;
+  --color-red-text: #8f1d16;
+  --color-red-50: #fdecea;
+  --font-sans: var(--font-figtree), system-ui, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
+@layer components {
+  .btn-solid {
+    @apply inline-flex h-[60px] items-center justify-center gap-3 rounded-2xl bg-blue px-7 text-[19px] font-semibold text-white transition-colors hover:bg-blue-dark;
+  }
+  .btn-tonal {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-[14px] bg-blue-50 font-semibold text-blue-dark transition-colors hover:bg-blue-100;
+  }
+  .field {
+    @apply h-[60px] w-full rounded-[14px] border-[1.5px] border-field bg-white px-[18px] text-[18px] text-ink placeholder:text-[#6b7893] focus:border-blue focus:ring-4 focus:ring-blue/20 focus-visible:outline-none aria-[invalid=true]:border-2 aria-[invalid=true]:border-red disabled:border-line disabled:bg-page disabled:text-ink-2;
+  }
+}
