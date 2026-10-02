@@ -1,5 +1,7 @@
 # MedAlert Guardian Prototype
 
+**Live demo:** https://medalert-guardian.vercel.app
+
 A small Next.js prototype of a modernised MedAlert experience: a homepage hero, a Guardian login, and a Guardian dashboard where a family member checks on Margaret Thompson, the only (fictional) wearer. Authentication and device data are deliberately mocked.
 
 | Route | Purpose |
